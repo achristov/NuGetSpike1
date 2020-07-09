@@ -1,7 +1,7 @@
 # NuGetSpike1
-Working with symbols and source code for a NuGet package.
+**NuGet packages**: working with symbols and source code; debugging a package.
 
-1. Create NuGet package
+## Create NuGet package ##
 
 Console:
 ```
@@ -22,7 +22,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 ![Create packages](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20140213.png "Directory structure after 'dotnet pack...'")
 
-2. Push the package
+## Push the package ##
 
 Console:
 ```
@@ -48,4 +48,8 @@ It is in .nupkg (as usual)
 
 The Symbols (.pdb)
 The program database is stored in MyPackage.snupkg
+
+![Create packages](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141133.png "Contents of .snupkg in NuGet Explorer")
+
+At this point when debugging the application which consumes the NuGet package the debugger prompts for the source code location:
 
