@@ -26,7 +26,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 Console:
 ```
-dotnet nuget push -s http://baget.local/v3/index.json MyPackage.1.1.0.nupkg -k 123456
+dotnet nuget push -s http://baget.local/v3/index.json bin\Debug\MyPackage.1.0.0.nupkg -k 123456
 ```
 
 Output:
