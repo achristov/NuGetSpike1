@@ -7,6 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp2", "ConsoleApp2\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyPackage", "MyPackage\MyPackage.csproj", "{BC47B9B7-9F3C-48A0-AC24-885B982B2537}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{778FA50B-343D-426A-ABD3-36AFE37A454C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{4038E60A-D63E-429B-9CC6-BF12D8C3F637}"
+	ProjectSection(SolutionItems) = preProject
+		Images\Annotation 2020-07-09 140213.png = Images\Annotation 2020-07-09 140213.png
+		Images\Annotation 2020-07-09 141015.png = Images\Annotation 2020-07-09 141015.png
+		Images\Annotation 2020-07-09 141133.png = Images\Annotation 2020-07-09 141133.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +33,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4038E60A-D63E-429B-9CC6-BF12D8C3F637} = {778FA50B-343D-426A-ABD3-36AFE37A454C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8E78E32B-A4FD-4AB4-B51C-D1CB175FAE84}
