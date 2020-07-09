@@ -12,8 +12,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{4038E60A-D63E-429B-9CC6-BF12D8C3F637}"
 	ProjectSection(SolutionItems) = preProject
 		Images\Annotation 2020-07-09 140213.png = Images\Annotation 2020-07-09 140213.png
-		Images\Annotation 2020-07-09 141015.png = Images\Annotation 2020-07-09 141015.png
-		Images\Annotation 2020-07-09 141133.png = Images\Annotation 2020-07-09 141133.png
 	EndProjectSection
 EndProject
 Global
