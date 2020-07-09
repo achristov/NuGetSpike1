@@ -44,6 +44,7 @@ Your package was pushed.
 The Assembly (.dll)
 It is in .nupkg (as usual)
 
+![Create packages](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141015.png "Contents of .nupkg in NuGet Explorer")
 
 The Symbols (.pdb)
 The program database is stored in MyPackage.snupkg
