@@ -17,7 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{4038E6
 		Images\Annotation 2020-07-09 142220.png = Images\Annotation 2020-07-09 142220.png
 		Images\Annotation 2020-07-09 142255.png = Images\Annotation 2020-07-09 142255.png
 		Images\Annotation 2020-07-09 155254.png = Images\Annotation 2020-07-09 155254.png
+<<<<<<< HEAD
 		Images\Annotation 2020-07-09 155933.png = Images\Annotation 2020-07-09 155933.png
+=======
 >>>>>>> 9e34074a1ba3840557a13df7e6fce97837e6df8e
 	EndProjectSection
 EndProject
