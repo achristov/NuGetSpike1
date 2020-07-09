@@ -55,6 +55,11 @@ At this point stepping into package's source code is possible. The debugger expe
 
 ![Debug-1](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20142220.png "'.pdb' location")
 
-When the .pdb is missing however, say, when the package is built elsewhere, the debugger downloads the symbols. If the code is missing too it is downloaded from github if:
-1. 
+When the .pdb is missing however, say, when the package is built elsewhere, the debugger downloads the symbols from the symbol server (in my case BaGet server). 
+
+If the code is missing too it is downloaded from a location specfied in the package metadata. I use NuGet explorer and set the following metadata fields like this:
+
+![Metadata](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20155254.png  "Metadata sourc code fields contents")
+
+
 
