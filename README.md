@@ -20,7 +20,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
   Successfully created package 'D:\Projects\2019\NuGetSpike1\MyPackage\bin\Debug\MyPackage.1.1.0.snupkg'.
 ```  
 
-[Create packages](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Create packages](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20140213.png "Directory structure after 'dotnet pack...'")
 
 2. Push the package
 
