@@ -44,12 +44,22 @@ Your package was pushed.
 The Assembly (.dll)
 It is in .nupkg (as usual)
 
-![Create packages](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141015.png "Contents of .nupkg in NuGet Explorer")
+![Create packages-1](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141015.png "Contents of .nupkg in NuGet Explorer")
 
 The Symbols (.pdb)
 The program database is stored in MyPackage.snupkg
 
-![Create packages](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141133.png "Contents of .snupkg in NuGet Explorer")
+![Create packages-2](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141133.png "Contents of .snupkg in NuGet Explorer")
 
-At this point when debugging the application which consumes the NuGet package the debugger prompts for the source code location:
+At this point stepping into package's source code is possible. The debugger expects the package's program database (.pdb) file in the following location:
+
+![Debug-1](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20142220.png "'.pdb' location")
+
+However, when debugging the application which relies on symbols and code provided by the NuGet package itself couple of requirements have to be met:
+Source Link support has to be enabled
+
+
+
+
+the debugger prompts for the source code location:
 
