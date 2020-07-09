@@ -55,12 +55,6 @@ At this point stepping into package's source code is possible. The debugger expe
 
 ![Debug-1](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20142220.png "'.pdb' location")
 
-When the .pdb is missing however, say, when the package is built elsewhere, debugging the application which relies on symbols and code provided by the NuGet package itself requires a couple of conditions to be met:
-Source Link support has to be enabled
-
-
-
-
-
-the debugger prompts for the source code location:
+When the .pdb is missing however, say, when the package is built elsewhere, the debugger downloads the symbols. If the code is missing too it is downloaded from github if:
+1. 
 
