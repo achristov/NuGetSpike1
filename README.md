@@ -1,5 +1,5 @@
 # NuGetSpike1
-**NuGet packages**: working with symbols and source code; debugging a package.
+**NuGet packages**: working with symbols and source code; debugging ("stepping into") a package source code.
 
 ## Create NuGet package ##
 
