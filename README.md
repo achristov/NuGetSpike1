@@ -61,7 +61,7 @@ If the code is missing too it is downloaded from a location specfied in the pack
 
 ![Metadata](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20155254.png  "Metadata source code fields contents")
 
-The NuGet server I use is BaGet and the info about the package it displays looks like this:
+The NuGet server I use is [BaGet](https://github.com/loic-sharma/BaGet "BaGet on GitHub") and the info about the package it displays looks like this:
 
 ![BaGet](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20155933.png  "BaGet server displaying info about the package")
 
