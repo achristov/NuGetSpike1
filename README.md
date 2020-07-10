@@ -23,7 +23,7 @@ In order to make the NuGet package debuggable the following lines have to be add
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <Version>2.0.0</Version>    <!-- This will be the NuGet package version -->
+        <Version>2.0.0</Version>    <!-- This is the NuGet package version too. -->
     </PropertyGroup>
 
     <PropertyGroup>
@@ -131,7 +131,9 @@ If the .pdb and the source code are in their proper locations (package developpe
 
 When the .pdb is missing however, say, when the package is built elsewhere, the debugger downloads the symbols from the symbol server (in my case [BaGet](https://github.com/loic-sharma/BaGet "BaGet on GitHub") server). 
 
-If the code is missing too it is downloaded from a the repository location specfied in the package metadata.
+If the code is missing too it is downloaded from a the repository location specfied in the package metadata (see MyPackage.csproj at the beginning of the file). VS2019 debugger needs everything set correctly to step into the debugged code. Otherwise it asks for the source code location:
+
+
 
 The NuGet server I use is [BaGet](https://github.com/loic-sharma/BaGet "BaGet on GitHub") and the info about the package it displays looks like this:
 
