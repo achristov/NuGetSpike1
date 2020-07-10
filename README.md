@@ -63,7 +63,7 @@ In order to make the NuGet package debuggable the following lines have to be add
 </Project>
 ```
 
-As you can see the project to be packed references ``` Microsoft.SourceLink.GitHub ``` package. This, plus the SourceLink enabled in Options -> Debug -> General, makes the debugger load the source code from the specified location.
+As you can see the project to be packed references ``` Microsoft.SourceLink.GitHub ``` package. This, plus the [SourceLink](https://github.com/dotnet/sourcelink) enabled in Options -> Debug -> General, makes the debugger load the source code from the specified location.
 
 Before that however, few otehr things should be set. VS2019 NuGet package editor does not allow for supplying branch and commit id to the package metadata (.nuspec). So, either edit this data manually 
 ```
@@ -94,18 +94,15 @@ Here's the fodler contents after executing the ```pack``` command. There are pre
 
 ![Create packages](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20140213.png "Directory structure after 'dotnet pack...'")
 
-The Assembly (.dll)
-
-It is in .nupkg (as usual)
+The Assembly (.dll) is in .nupkg (as usual):
 
 ![Create packages-1](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141015.png "Contents of .nupkg in NuGet Explorer")
 
-The Symbols (.pdb)
-The program database is stored in MyPackage.snupkg
+The Symbols (.pdb, program database) is stored in MyPackage.snupkg:
 
 ![Create packages-2](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141133.png "Contents of .snupkg in NuGet Explorer")
 
-It is helpful to load the package in NuGet Explorer and see if SourceLink is enabled:
+It is helpful to load the package in NuGet Explorer and see if [SourceLink](https://github.com/dotnet/sourcelink) is enabled:
 
 ![Package Metadata](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-10%20121150.png "NuGet Explorer showing package metadata")
 
@@ -128,17 +125,13 @@ Pushing MyPackage.2.0.0.snupkg to 'http://baget.local/api/v2/symbol'...
 Your package was pushed.
 ```
 
-If the .pdb and cdoe are in their corresponding locations (package developped and published from the same machine which is used for developing the consumer project/dll everything's just fine - VS2019 debuger finds everything in it's proper location and stepping into package's source code is donre. The debugger expects the package's program database (.pdb) file in the following location:
+If the .pdb and the source code are in their proper locations (package developped and published from the same machine which is used for developing the consumer project/dll) everything's just fine - VS2019 debuger finds everything necessary to step into package's source code. The program database (.pdb) file location is somewhat unusual, it's loaded from ```obj\Debug```, not ```bin\Debug``` folder:
 
 ![Debug-1](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20142220.png "'.pdb' location")
 
-The source code, location of which is stored in the .pdb has to be in its proper location too.
-
 When the .pdb is missing however, say, when the package is built elsewhere, the debugger downloads the symbols from the symbol server (in my case [BaGet](https://github.com/loic-sharma/BaGet "BaGet on GitHub") server). 
 
-If the code is missing too it is downloaded from a the repository location specfied in the package metadata. I use NuGet explorer and set the following metadata fields like this:
-
-![Metadata](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20155254.png  "Metadata source code fields contents")
+If the code is missing too it is downloaded from a the repository location specfied in the package metadata.
 
 The NuGet server I use is [BaGet](https://github.com/loic-sharma/BaGet "BaGet on GitHub") and the info about the package it displays looks like this:
 
