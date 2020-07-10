@@ -133,7 +133,13 @@ When the .pdb is missing however, say, when the package is built elsewhere, the 
 
 If the code is missing too it is downloaded from a the repository location specfied in the package metadata (see MyPackage.csproj at the beginning of the file). VS2019 debugger needs everything set correctly to step into the debugged code. Otherwise it asks for the source code location:
 
+![404](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-10%20130007.png " Not Found")
 
+In order to make sure that the source code has been downloaded form a repository hover over teh tab displaying the source:
+
+![Downloaded](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-10%20130007.png "Source Code downloaded by debugger")
+
+## The NuGet Server ##
 
 The NuGet server I use is [BaGet](https://github.com/loic-sharma/BaGet "BaGet on GitHub") and the info about the package it displays looks like this:
 
