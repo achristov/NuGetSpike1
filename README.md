@@ -90,7 +90,20 @@ Copyright (C) Microsoft Corporation. All rights reserved.
   Successfully created package 'D:\Projects\2019\NuGetSpike1\MyPackage\bin\Debug\MyPackage.2.0.0.snupkg'.
 ```  
 
+Here's the fodler contents after executing the ```pack``` command. There are previous version(s) also as you can see.
+
 ![Create packages](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20140213.png "Directory structure after 'dotnet pack...'")
+
+The Assembly (.dll)
+
+It is in .nupkg (as usual)
+
+![Create packages-1](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141015.png "Contents of .nupkg in NuGet Explorer")
+
+The Symbols (.pdb)
+The program database is stored in MyPackage.snupkg
+
+![Create packages-2](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141133.png "Contents of .snupkg in NuGet Explorer")
 
 It is helpful to load the package in NuGet Explorer and see if SourceLink is enabled:
 
@@ -114,16 +127,6 @@ Pushing MyPackage.2.0.0.snupkg to 'http://baget.local/api/v2/symbol'...
   Created http://baget.local/api/v2/symbol/ 24ms
 Your package was pushed.
 ```
-
-The Assembly (.dll)
-It is in .nupkg (as usual)
-
-![Create packages-1](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141015.png "Contents of .nupkg in NuGet Explorer")
-
-The Symbols (.pdb)
-The program database is stored in MyPackage.snupkg
-
-![Create packages-2](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141133.png "Contents of .snupkg in NuGet Explorer")
 
 If the .pdb and cdoe are in their corresponding locations (package developped and published from the same machine which is used for developing the consumer project/dll everything's just fine - VS2019 debuger finds everything in it's proper location and stepping into package's source code is donre. The debugger expects the package's program database (.pdb) file in the following location:
 
