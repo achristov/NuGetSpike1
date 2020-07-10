@@ -2,12 +2,20 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+<<<<<<< Updated upstream
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
         <Version>2.0.0</Version>
     </PropertyGroup>
 
     <PropertyGroup>
         <TargetFramework>netcoreapp2.1</TargetFramework>
+=======
+        <Version>2.0.0</Version>    <!-- This will be the NuGet package version -->
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+>>>>>>> Stashed changes
 
         <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -19,11 +27,26 @@
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
+<<<<<<< Updated upstream
         <!--<IncludeSourceFilesProjectOutputGroup>true</IncludeSourceFilesProjectOutputGroup>-->
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/achristov/NuGetSpike1/</RepositoryUrl>
         <Company>SumoSoft</Company>
         <Authors>achristov</Authors>
+=======
+        <RepositoryType>git</RepositoryType>
+
+        <!-- This is where the repository is located, as in many other cases - github -->
+        <RepositoryUrl>https://github.com/achristov/NuGetSpike1/</RepositoryUrl>
+        
+        <!-- The Company... -->
+        <Company>SumoSoft</Company>
+        
+        <!-- ... and the Author(s) -->
+        <Authors>achristov</Authors>
+
+        <!-- Same as repository URL (in this particular case) -->
+>>>>>>> Stashed changes
         <PackageProjectUrl>https://github.com/achristov/NuGetSpike1/</PackageProjectUrl>
     </PropertyGroup>
 
@@ -33,4 +56,8 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
     </ItemGroup>
+<<<<<<< Updated upstream
 </Project>
+=======
+</Project>
+>>>>>>> Stashed changes
