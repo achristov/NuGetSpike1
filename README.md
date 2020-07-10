@@ -137,7 +137,7 @@ If the code is missing too it is downloaded from a the repository location specf
 
 In order to make sure that the source code has been downloaded form a repository hover over teh tab displaying the source:
 
-![Downloaded](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-10%20130007.png "Source Code downloaded by debugger")
+![Downloaded](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-10%20130218.png "Source Code downloaded by debugger")
 
 ## The NuGet Server ##
 
