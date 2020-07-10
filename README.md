@@ -71,7 +71,7 @@ Before that however, few otehr things should be set. VS2019 NuGet package editor
 ```
 (**UNANSWERED QUESTIONS SO FAR**: branch omitted, perhaps because it is master (?); if commit id is also missing perhaps the last one would be picked (??)).
 
-Now packing the file with the command bellow produces two packages insterad, a regular one (.nupkg) and a symbol, conaining the .pdb one (.snupkg).
+Now packing the file with the command bellow produces two packages instead, a regular one (.nupkg) and a symbol, conaining the .pdb one (.snupkg).
 
 Console:
 ```
@@ -94,6 +94,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 It is helpful to load the package in NuGet Explorer and see if SourceLink is enabled:
 
+![Package Metadata](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-10%20121150.png "NuGet Explorer showing package metadata")
 
 ## Push the package ##
 
@@ -124,13 +125,15 @@ The program database is stored in MyPackage.snupkg
 
 ![Create packages-2](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20141133.png "Contents of .snupkg in NuGet Explorer")
 
-At this point stepping into package's source code is possible. The debugger expects the package's program database (.pdb) file in the following location:
+If the .pdb and cdoe are in their corresponding locations (package developped and published from the same machine which is used for developing the consumer project/dll everything's just fine - VS2019 debuger finds everything in it's proper location and stepping into package's source code is donre. The debugger expects the package's program database (.pdb) file in the following location:
 
 ![Debug-1](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20142220.png "'.pdb' location")
 
+The source code, location of which is stored in the .pdb has to be in its proper location too.
+
 When the .pdb is missing however, say, when the package is built elsewhere, the debugger downloads the symbols from the symbol server (in my case [BaGet](https://github.com/loic-sharma/BaGet "BaGet on GitHub") server). 
 
-If the code is missing too it is downloaded from a location specfied in the package metadata. I use NuGet explorer and set the following metadata fields like this:
+If the code is missing too it is downloaded from a the repository location specfied in the package metadata. I use NuGet explorer and set the following metadata fields like this:
 
 ![Metadata](https://github.com/achristov/NuGetSpike1/blob/Documentation/Images/Annotation%202020-07-09%20155254.png  "Metadata source code fields contents")
 
