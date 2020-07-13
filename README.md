@@ -27,8 +27,6 @@ In order to make the NuGet package debuggable the following lines have to be add
     </PropertyGroup>
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.1</TargetFramework>
-
         <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
 
